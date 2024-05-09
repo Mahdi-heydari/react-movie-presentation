@@ -4,7 +4,7 @@ import { Card } from "flowbite-react";
 export default function CardItem({imgSrc, name, origin}) {
   return (
     <Card
-      className="max-w-sm m-auto bg-cyan-700"
+      className="max-w-sm m-auto bg-[#189AB4]"
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={imgSrc}
     >
