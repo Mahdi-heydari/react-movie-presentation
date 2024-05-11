@@ -1,14 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import CardItem from "../components/CardItem";
+import { fetchData } from "../services/api";
 
 export default function Home() {
-  const fetchData = async () => {
-    const result = await axios.get("https://rickandmortyapi.com/api/character");
-    return result.data.results;
-  };
-
   const { data, isLoading } = useQuery({
     queryKey: ["cards"],
     queryFn: fetchData,
@@ -28,7 +23,7 @@ export default function Home() {
             id={item.id}
           />
         ))
-      )}  
+      )}
     </div>
   );
 }

@@ -1,34 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import CardItem from "../components/CardItem";
 import { Badge } from "flowbite-react";
 import LoadingSpinner from "../ui/LoadingSpinner";
+import { getCharacterInfo } from "../services/api";
 
 export default function SearchResult() {
   const { id } = useParams();
 
-  const getCharacterInfo = async () => {
-    const result = await axios.get(
-      `https://rickandmortyapi.com/api/character/${id}`
-    );
-    console.log("object", result.data);
-    return result.data;
-  };
-
   const { data, isLoading } = useQuery({
     queryKey: ["characterInfo"],
-    queryFn: getCharacterInfo,
+    queryFn: () => getCharacterInfo(id),
   });
 
   return (
     <div>
-      {isLoading ? <LoadingSpinner/> : (
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
         <>
           <CardItem
             imgSrc={data.image}
             name={data.name}
             origin={data.origin.name}
+            id={data.id}
           />
           <div className="flex flex-wrap justify-center mt-5 gap-10">
             <Badge

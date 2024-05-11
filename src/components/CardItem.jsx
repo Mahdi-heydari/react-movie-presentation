@@ -6,7 +6,7 @@ export default function CardItem({imgSrc, name, origin, id}) {
   const navigate = useNavigate();
 
   const handelClick = () => {
-    navigate(`search/${id}`)
+    navigate(`/search/${id}`)
   }
   
 
