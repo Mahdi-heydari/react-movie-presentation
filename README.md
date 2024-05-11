@@ -1,8 +1,25 @@
-# React + Vite
+# React Move Presentation 🎬🍿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An presentation rick and morty movie app and you can find all characters in this movie .
 
-Currently, two official plugins are available:
+- amzg UI with React-flowbite 🖼
+- use axios to fetch data 📡
+- powered by React Query for Store data and allowing you to focus on building your UI 💡
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
