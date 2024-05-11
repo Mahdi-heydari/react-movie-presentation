@@ -25,7 +25,7 @@ export default function SearchResult() {
             origin={data.origin.name}
             id={data.id}
           />
-          <div className="flex flex-wrap justify-center mt-5 gap-10">
+          <div className="flex flex-wrap justify-center mt-5 max-md:mt-10 gap-10">
             <Badge
               color="warning"
               size="xl"

@@ -8,4 +8,9 @@
 
 body{
   background-color: #D4F1F4;
+  overflow-x:hidden;
+}
+
+.p-6{
+  padding: .5rem;
 }

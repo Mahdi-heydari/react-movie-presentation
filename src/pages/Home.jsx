@@ -10,7 +10,7 @@ export default function Home() {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-5  ">
+    <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2 max-md:p-[0.5rem]">
       {isLoading ? (
         <LoadingSpinner />
       ) : (
